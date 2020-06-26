@@ -6,11 +6,11 @@ console.log(header.display('Devan', 'Wong', 'Assignment 5.3'))
 ; Author:  Devan Wong
 ; Date:   26 June 2020
 ; Modified By:
-; Description: Object Collection
+; Description: Filtering/Reducing Complex Data Structures
 ;===========================================
 */
 
-//composers
+//composers obj collection
 const composers = [
   {
     firstName: 'Frank',
@@ -44,10 +44,25 @@ const composers = [
   }
 ];
 
-//iterating through the object array to find the last name, genre and rating.
-composers.forEach(function(composer){
-  console.log(
-    'Composer: ' + composer.lastName +
-    ' Genre: ' + composer.genre +
-    ' Rating:' + composer.rating)
+let ratings = composers.map((composer) => {
+  return 'Rating: ' + composer.rating + '\n' + 'Composer: ' + composer.lastName
 });
+
+let genres = composers.map((composer) => {
+  return 'Genre: ' + composer.genre + '\n' + 'Composer: ' + composer.lastName
+});
+
+console.log(' ');
+
+console.log('-- COMPOSER BY RATING --')
+ratings.forEach(function(rating) {
+  console.log(rating + '\n');
+});
+
+console.log(' ');
+
+console.log('-- COMPOSER BY GENRE --')
+genres.forEach(function(genre) {
+  console.log(genre + '\n');
+});
+
