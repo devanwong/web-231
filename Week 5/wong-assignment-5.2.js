@@ -1,5 +1,5 @@
 const header = require('../wong-header.js');
-console.log(header.display('Devan', 'Wong', 'Assignment 5.1'))
+console.log(header.display('Devan', 'Wong', 'Assignment 5.2'))
 /*
 ============================================
 ; Title:  Arrays Advanced js
