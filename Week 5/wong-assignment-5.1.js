@@ -2,7 +2,7 @@ const header = require('../wong-header.js');
 console.log(header.display('Devan', 'Wong', 'Assignment 5.1'))
 /*
 ============================================
-; Title:  Arrays js
+; Title:  Arrays Advanced js
 ; Author:  Devan Wong
 ; Date:   25 June 2020
 ; Modified By:
