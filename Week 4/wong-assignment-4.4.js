@@ -4,7 +4,7 @@ console.log(header.display('Devan', 'Wong', 'Assignment 4.3'))
 ============================================
 ; Title:  Predicates js
 ; Author:  Devan Wong
-; Date:   18 June 2020
+; Date:   20 June 2020
 ; Modified By:
 ; Description: Filtering our word problems.
 ;===========================================
