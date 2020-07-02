@@ -65,4 +65,3 @@ console.log('-- COMPOSER BY GENRE --')
 genres.forEach(function(genre) {
   console.log(genre + '\n');
 });
-
