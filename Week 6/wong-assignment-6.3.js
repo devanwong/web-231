@@ -1,5 +1,5 @@
 const header = require('../wong-header.js');
-console.log(header.display('Devan', 'Wong', 'Assignment 63'))
+console.log(header.display('Devan', 'Wong', 'Assignment 6.3'))
 /*
 ============================================
 ; Title:  Objects js
@@ -10,30 +10,30 @@ console.log(header.display('Devan', 'Wong', 'Assignment 63'))
 ;===========================================
 */
 
-//creating an object literal, that have three properties and a getter/setter
-var person = {
+//creating an object literal, that have three properties and a getter/setter method
+const ticket = {
   //default values
   id: 801,
   name: 'Developer',
   requestor: 'Devan Wong',
   //get to display all properties
-  get fullPerson(){
+  get fullTicket(){
     return "id: " + this.id + " name: " + this.name + " requestor: " + this.requestor;
   },
   //set to alter all properties
-  set fullPerson(val){
-    this.fullPerson = val;
+  set fullTicket(val){
+    this.fullTicket = val;
   }
 }
 
 // console.log('Before:');
-// console.log(person.fullPerson);
+// console.log(ticket.fullTicket);
 
 //alterations to match github
-person.id = 101;
-person.name = 'Help Desk Support';
-person.requestor = 'Bob Jones';
+ticket.id = 101;
+ticket.name = 'Help Desk Support';
+ticket.requestor = 'Bob Jones';
 
 //OUTPUT of new values
 //console.log('After set:')
-console.log(person.fullPerson);
+console.log(ticket.fullTicket);
