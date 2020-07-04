@@ -27,6 +27,4 @@ const ticket = {
 }
 //OUTPUT
 //  Ticket 105 was created on <today' date> and assigned to employee Bob Jones (Programmer I).
-console.log('Ticket ' + ticket.id + ' was created on ' + ticket.dateCreated.toDateString()
-+ ' and assigned to employee ' + ticket.fullPerson
-)
+console.log('Ticket ' + ticket.id + ' was created on ' + ticket.dateCreated.toDateString() + ' and assigned to employee ' + ticket.fullPerson);
