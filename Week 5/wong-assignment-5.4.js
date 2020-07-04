@@ -43,24 +43,25 @@ const composers = [
     rating: 7
   }
 ];
-
+//filtering out only the ratings from each ojb.
 let ratings = composers.map((composer) => {
   return 'Rating: ' + composer.rating + '\n' + 'Composer: ' + composer.lastName
 });
-
+//filtering out only the genres from each ojb.
 let genres = composers.map((composer) => {
   return 'Genre: ' + composer.genre + '\n' + 'Composer: ' + composer.lastName
 });
 
 console.log(' ');
 
+//iterating through the obj array outputting rating with composer
 console.log('-- COMPOSER BY RATING --')
 ratings.forEach(function(rating) {
   console.log(rating + '\n');
 });
 
 console.log(' ');
-
+//iterating through the obj array outputting genre with composer
 console.log('-- COMPOSER BY GENRE --')
 genres.forEach(function(genre) {
   console.log(genre + '\n');

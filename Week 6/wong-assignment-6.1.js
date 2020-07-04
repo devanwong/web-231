@@ -6,7 +6,7 @@ console.log(header.display('Devan', 'Wong', 'Assignment 6.1'))
 ; Author: Devan Wong
 ; Date:  2 July 2020
 ; Modified By:
-; Description: Objects and built in objects [ 2 errors ]
+; Description: Objects and built in objects [ 3 errors ]
 ;===========================================
 */
 
@@ -30,3 +30,4 @@ for (let value in topSecret) {
 }
 
 //OUT THE SSN SHOULD NOT BE SHOWN.
+//OUTPUT Devan Wong November 7, 1990
