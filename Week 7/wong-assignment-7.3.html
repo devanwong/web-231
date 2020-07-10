@@ -1,0 +1,57 @@
+<!-- /*
+============================================
+; Title:   JavaScript in Web Browsers js
+; Author: Devan Wong
+; Date:  9 July 2020
+; Modified By:
+; Description: Constructor Functions
+;===========================================
+*/ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 7.3</title>
+  <link rel="stylesheet" href="site.css">
+</head>
+<body>
+  <script>
+    document.write("<h1>Shopping List v1</h1><ol><li>Oranges</li><li>Apples</li><li>Pears</li><li>Limes</li><li>Lemons</li></ol>")
+  </script>
+  <div id="list"></div>
+  <script>
+    document.getElementById('list').innerHTML = "<h1>Shopping List v2</h1>" +
+    "<table>" +
+      "<thead>" +
+        "<tr>" +
+          "<th>ID</th>" +
+          "<th>List Item</th>" +
+        "</tr>" +
+      "</thead>" +
+      "<tbody>" +
+      "<tr>" +
+        "<td>1</td>" +
+        "<td>Oranges</td>" +
+      "</tr>" +
+      "<tr>" +
+        "<td>2</td>" +
+        "<td>Apples</td>" +
+      "</tr>" +
+      "<tr>" +
+        "<td>3</td>" +
+        "<td>Pear</td>" +
+      "</tr>" +
+      "<tr>" +
+        "<td>4</td>" +
+        "<td>Limes</td>" +
+      "</tr>" +
+      "<tr>" +
+        "<td>5</td>" +
+        "<td>Lemons</td>" +
+      "</tr>" +
+     " </tbody>" +
+    "</table>"
+  </script>
+</body>
+</html>
