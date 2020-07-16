@@ -1,0 +1,58 @@
+
+<!-- /*
+============================================
+; Title:   DOM Manipulation js
+; Author: Devan Wong
+; Date:  15 July 2020
+; Modified By:
+; Description: There are three errors in this code.
+;===========================================
+*/ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <style type="text/css">
+  #panel, #down, #up {
+    padding: 5px;
+    text-align:center;
+    background-color: red;
+    border: 1px solid green;
+  }
+  #panel{
+    padding: 50px;
+    display:none;
+  }
+  #up {
+    display:none;
+  }
+  </style>
+  <script>
+    $(Document).ready(function(){
+      // clicking slide down to show message
+      $(#down).click(function(){
+        $("#panel").slideDown("slow");
+        $("#up").show();
+        $("#down").hide();
+      });
+      // clicking slide up to show message
+      $(#up).click(function(){
+        $("#panel").slideUp("slow");
+        $("#down").show();
+        $("#up").hide();
+      });
+    });
+    //output
+    //click down should disappear when click and click up should appear
+    //click up should disappear when clicked and click down should appear
+  </script>
+</head>
+<body>
+  <div id="down">Click to slide down.</div>
+  <div id="panel">Peek a Boo!</div>
+  <div id="up">Click here to slide up.</div>
+</body>
+</html>
