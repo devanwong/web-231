@@ -1,0 +1,100 @@
+
+<!-- /*
+============================================
+; Title: Finding and Manipulating DOM Elements
+; Author: Devan Wong
+; Date:  17 July 2020
+; Modified By:
+; Description: Dynamic HTML
+;===========================================
+*/ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 8.2</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- Use Roboto: 300, 400, 500 for the font -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;1,400&display=swap" rel="stylesheet">
+  <style type="text/css">
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    }
+    #container {
+      margin: 0 auto;
+      width:100%;
+    }
+    div {
+      margin:0 auto;
+      background-color: white;
+    }
+    /* Add a title to the unordered */
+    /* Have the unordered list appear 20px below the topbar */
+    h2 {
+      margin:0;
+      padding:20px 0;
+    }
+    /* Add a topbar and give it a different background color */
+    #topbar {
+      background-color:lightgray;
+      height:50px;
+    }
+    #fruits {
+      width:50%;
+    }
+    /* Center the unordered list (margin: 0 auto;)  */
+    #fruits ul {
+      padding:0;
+      margin: 0 auto;
+      list-style: none;
+    }
+  </style>
+  <script>
+    //an array of fruits with two fields id and type.
+    let fruits = [
+      {
+        id:1,
+        type: "apple"
+      },
+      {
+        id:2,
+        type: "banana"
+      },
+      {
+        id:3,
+        type:"strawberry"
+      },
+      {
+        id:4,
+        type:"pineapple"
+      },
+      {
+        id:5,
+        type:"grapes"
+      },
+    ];
+    var out = "<h2>Fruits</h2><ul>";
+      // iterating through the loops to output the fruit.
+    for (var x = 0; x < fruits.length; x++) {
+        out += "<li>" + fruits[x].id + ' ' + fruits[x].type + "</li>";
+        console.log(fruits[x].type);
+    }
+    out += "</ul>";
+
+  </script>
+</head>
+  <body>
+    <div id="container">
+      <!-- added a top bar -->
+      <div id="topbar"></div>
+      <!-- bullets of fruits  -->
+      <div id="fruits"></div>
+    </div>
+  </body>
+  <script>
+  document.getElementById('fruits').innerHTML = out;
+  </script>
+</html>

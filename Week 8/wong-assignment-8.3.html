@@ -1,0 +1,110 @@
+
+<!-- /*
+============================================
+; Title: jquery
+; Author: Devan Wong
+; Date:  18 July 2020
+; Modified By:
+; Description: Dynamic HTML
+;===========================================
+*/ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 8.3</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- Roboto: 300, 400, 500 for the font -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+  * {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  }
+  /* Apply alternate background colors for each table row
+ */
+  tr:nth-child(even) {
+    background-color: lightgray;
+  }
+  /* Add a topbar | different bgcolor */
+  #topbar {
+    height:50px;
+    background-color: lightgray;
+  }
+  /* BOTH sections appear 20px below the topbar & 20px below the left of the page*/
+  .margin-20 {
+    margin:20px;
+  }
+  /* made the table move 20px from the toggle paragraph. */
+  .mr-20 {
+    margin-right:20px;
+  }
+  .inline-grid {
+    display: inline-grid;
+  }
+  .inline {
+    display: inline;
+  }
+  .w-50{
+    width:50%;
+  }
+</style>
+<body>
+  <div id="topbar"></div>
+  <div id="container" class="margin-20">
+  <!-- PART A -->
+    <div class="inline-grid w-50 mr-20">
+      <!-- HTML paragraph and fill it with a paragraph of Lorem Ipsum data & give it a paragraph title. -->
+    <p class="inline" title="Lorem Ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas suscipit porttitor ex. Sed commodo ullamcorper metus, a tempor erat tempor a. Suspendisse lectus elit, ornare vitae varius id, tincidunt non urna. In vel ligula enim. Morbi aliquet, mi eget varius rutrum, arcu sem maximus ante, non pharetra nibh nisl sit amet velit. Aenean pulvinar id orci nec blandit. Sed sed mi interdum, sollicitudin odio non, faucibus ex. Sed id viverra turpis.</p>
+    <!-- HTML button and name it "Toggle"  -->
+    <button id="toggle">Toggle</button>
+    </div>
+    <!-- PART B -->
+    <!-- HTML table of at least five (5) fruits  -->
+    <div class="inline-grid">
+      <table class="inline">
+        <tr>
+            <td><a href="#" class="fruitId">1</a></td>
+            <td>Apples</td>
+        </tr>
+        <tr>
+            <td><a href="#" class="fruitId">2</a></td>
+            <td>Pears</td>
+        </tr>
+        <tr>
+            <td><a href="#" class="fruitId">3</a></td>
+            <td>Bananas</td>
+        </tr>
+        <tr>
+          <td><a href="#" class="fruitId">4</a></td>
+          <td>Kiwi</td>
+        </tr>
+        <tr>
+          <td><a href="#" class="fruitId">5</a></td>
+          <td>Orange</td>
+        </tr>
+      </table>
+      </div>
+  </div>
+
+
+  <script>
+    // click event for the "Toggle" button and show or hide the paragraph each time the button is clicked
+      $(function () {
+          // [PART A]
+          $("button").click(function(){
+            $("p").toggle("none");
+          });
+          // PART B
+          // register a click event for the ID field and output the ID and Type of the fruit to an alert window (user JavaScripts built-in alert() function)
+          $(".fruitId").click(function (event) {
+              event.preventDefault();
+              var fruitId = $(this).text();
+              var fruitType = $(this).closest("td").next().text();
+              alert(fruitId + " " + fruitType);
+          });
+      });
+  </script>
+</html>
+</body>
+</html>
